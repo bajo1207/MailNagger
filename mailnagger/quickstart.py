@@ -6,6 +6,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 # If modifying these scopes, delete the file token.pickle.
+from mailnagger.messageService import create_message, send_message
+
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly', 'https://www.googleapis.com/auth/gmail.send']
 
 def main():
@@ -43,6 +45,9 @@ def main():
         print('Labels:')
         for label in labels:
             print(label['name'])
+
+    message = create_message('joachimbm96gmail.com', 't-hellum@hotmail.com', 'Teeest', 'penis')
+    send_message(service, "me", message)
 
 if __name__ == '__main__':
     main()
