@@ -6,5 +6,11 @@ NR_1 = 22
 
 
 def test_compat_urlsafe_b64encode():
-    with pytest.raises(TypeError) as e:
+    with pytest.raises(AttributeError):
         compat_urlsafe_b64encode(NR_1)
+
+def test_send_message():
+    pass
+
+def test_create_message():
+    pass
