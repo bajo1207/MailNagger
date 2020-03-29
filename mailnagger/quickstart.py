@@ -46,7 +46,7 @@ def main():
         for label in labels:
             print(label['name'])
 
-    message = create_message('joachimbm96gmail.com', 't-hellum@hotmail.com', 'Teeest', 'penis')
+    message = create_message('ewewewe.com', 't-hellum@hotmail.com', 'Teeest', 'penis')
     send_message(service, "me", message)
 
 if __name__ == '__main__':
