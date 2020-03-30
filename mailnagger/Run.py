@@ -1,11 +1,11 @@
 import tkinter as tk
 
 from mailnagger.message_service import create_message, send_message
-from mailnagger.quickstart import GoogleAuth
+from mailnagger.quickstart import create_google_service
 
 
 def create_and_send():
-    google_service = GoogleAuth()
+    google_service = create_google_service()
     message = create_message('ewewewe.com', 'joachimbm96@gmail.com', 'Teeest', 'penis')
     send_message(google_service.service, "me", message)
 
