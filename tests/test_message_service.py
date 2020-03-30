@@ -18,3 +18,4 @@ def test_create_message():
 
 def test_create_message_answerType():
     answer = create_message('Test', 'Test', 'Test', 'Test')
+    assert isinstance(answer, dict)

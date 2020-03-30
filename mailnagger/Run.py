@@ -6,8 +6,8 @@ from mailnagger.quickstart import create_google_service
 
 def create_and_send():
     google_service = create_google_service()
-    message = create_message('ewewewe.com', 'joachimbm96@gmail.com', 'Teeest', 'penis')
-    send_message(google_service.service, "me", message)
+    message = create_message('ewewewe.com', 'birger@intility.no', 'Teeest', 'Hei')
+    send_message(google_service, "me", message)
 
 
 window = tk.Tk(className='MailNagger')
