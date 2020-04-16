@@ -25,6 +25,7 @@ protobuf==3.11.3
 py==1.8.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
+pytest-cov==2.8.1
 pyparsing==2.4.7
 pytest==5.4.1
 pytz==2019.3

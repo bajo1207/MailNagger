@@ -9,4 +9,4 @@ install:
   - pip install -r requirements.txt
 script: python -m pytest
 after_success:
-  - python -m codecov
+  - python -m py.test --cov-report=xml --cov=app tests/
