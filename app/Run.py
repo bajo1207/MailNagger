@@ -1,7 +1,7 @@
 import tkinter as tk
 
-from mailnagger.message_service import create_message, send_message
-from mailnagger.quickstart import create_google_service
+from app.message_service import create_message, send_message
+from app.quickstart import create_google_service
 
 
 def create_and_send():
