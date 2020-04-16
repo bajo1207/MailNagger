@@ -1,5 +1,3 @@
 language: python
-python:
-  - "3.8"
 # command to run tests
-script: python3 -m pytest
+script: pytest
