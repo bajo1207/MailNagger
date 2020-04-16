@@ -1,13 +1,13 @@
+import sys
+
 import pytest
 from app import message_service
 
-STR_1 = 'teststring'
-NR_1 = 22
 
 
 def test_compat_urlsafe_b64encode():
     with pytest.raises(AttributeError):
-        message_service.compat_urlsafe_b64encode(NR_1)
+        message_service.compat_urlsafe_b64encode(1)
 
 
 def test_send_message():
