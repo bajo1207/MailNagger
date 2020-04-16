@@ -20,5 +20,5 @@ def test_create_message():
 
 
 def test_create_message_answerType():
-    answer = message_service.create_message('Test', 'Test', 'Test', 'Test')
+    answer = message_service.create_message('Test', 1, 'Test', 'Test')
     assert isinstance(answer, dict)
