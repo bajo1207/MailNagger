@@ -1,16 +1,24 @@
-import pytest
-from mailnagger.message_service import *
+import sys
 
-STR_1 = 'teststring'
-NR_1 = 22
+import pytest
+from app import message_service
+
 
 
 def test_compat_urlsafe_b64encode():
     with pytest.raises(AttributeError):
-        compat_urlsafe_b64encode(NR_1)
+        message_service.compat_urlsafe_b64encode(1)
+
 
 def test_send_message():
     pass
 
+
 def test_create_message():
-    pass
+    with pytest.raises(AttributeError):
+        message_service.create_message('Test', 'Test', 'Test', 22)
+
+
+def test_create_message_answerType():
+    answer = message_service.create_message('Test', 'Test', 'Test', 'Test')
+    assert isinstance(answer, dict)
