@@ -1,7 +1,7 @@
 import sys
 
 import pytest
-from app import message_service
+from mailnagger import message_service
 
 
 
