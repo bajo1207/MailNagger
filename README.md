@@ -1,2 +1,2 @@
 # MailNagger
-A desktop app for sending emails
+A desktop app for sending emails efe
