@@ -9,5 +9,5 @@ install:
   - pip install -r requirements.txt
 script: python -m pytest
 after_success:
-  - python -m py.test --cov-report=xml --cov=app tests/
+  - python -m py.test --cov-report=xml --cov=mailnagger tests/
   - python -m codecov
