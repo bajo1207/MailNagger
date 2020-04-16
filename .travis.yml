@@ -10,4 +10,4 @@ install:
 script: python -m pytest
 
 after_success:
-  - codecov
+  - python -m codecov
