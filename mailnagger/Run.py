@@ -1,6 +1,6 @@
-import time
-from tkinter import *
 import os.path
+from tkinter import *
+from tkinter.font import Font
 
 from urllib3.connectionpool import xrange
 
@@ -22,19 +22,24 @@ def waithere():
 
 class MailNaggerGUI:
     def __init__(self, master):
+        self.fontStyle = Font(family="Lucida Grande", size=20)
         self.master = master
+        master.geometry("370x200")
         master.title("MailNagger")
+
         if not os.path.exists('token.pickle'):
+            self.label1 = Label(master, text="Welcome to MailNagger", font=self.fontStyle)
+
+            self.label1.pack()
             self.label = Label(master, text="")
             self.label.pack()
-
             for i in xrange(5, -1, -1):
-                self.label['text'] = f"You will now be prompted to login to your google account in {i}"
+                self.label['text'] = f"You will be prompted to login to your google account in {i}s"
                 waithere()
             self.google_service = create_google_service()
             self.label.destroy()
-        self.label = Label(master, text="Welcome to MailNagger")
-        self.label.pack()
+            self.label1.destroy()
+
         self.greet_button = Button(master, text="Greet")
         self.greet_button.pack()
 
